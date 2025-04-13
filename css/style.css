@@ -858,18 +858,72 @@
     margin-bottom: 15px;
 }
 
-/* Responsive Design for Smaller Screens */
+/* Responsive Design for Footer */
 @media (max-width: 768px) {
+    
     .footer-flex {
         flex-direction: column; /* Stack sections vertically */
         align-items: center; /* Center align items */
         text-align: center; /* Center text */
+        gap: 10px; /* Reduce gap for better spacing */
+    }
+    .footer-links ul:first-of-type {
+        text-align: left; /* Align to the left for LTR */
+        padding: 0; /* Remove default padding */
+        margin: 0; /* Remove default margin */
+        list-style-position: inside; /* Ensure bullets are inside the container */
     }
 
+    /* Alignment for RTL (Arabic) */
+    [dir="rtl"] .footer-links ul:first-of-type {
+        text-align: right; /* Align to the right for RTL */
+        padding: 0; /* Remove default padding */
+        margin: 0; /* Remove default margin */
+        list-style-position: inside; /* Ensure bullets are inside the container */
+    }
+    /* Ensure consistent alignment for <li> elements */
+    .footer-links ul li {
+        margin: 0; /* Remove any extra margin */
+        padding: 0; /* Remove any extra padding */
+    }
+
+    /* Ensure "Our Office" text aligns properly */
+    .footer-office p {
+        margin: 0; /* Remove any extra margin */
+        padding: 0; /* Remove any extra padding */
+        text-align: left; /* Align to the left for LTR */
+    }
+    [dir="rtl"] .footer-office p {
+        text-align: right; /* Align to the right for RTL */
+    }
     .footer-logo-section,
     .footer-office,
     .footer-links {
         max-width: 100%; /* Allow full width for each section */
+        margin-bottom: 5px; /* Add spacing between sections */
+    }
+
+    .footer-logo {
+        width: 180px;
+        margin-bottom: 0px; /* Reduce the space below the logo */
+    }
+
+    .footer-newsletter form {
+        flex-direction: column; /* Stack input and button vertically */
+        gap: 10px; /* Add spacing between input and button */
+        width: 100%; /* Ensure full width */
+    }
+
+    .footer-newsletter input[type="email"] {
+        width: 100%; /* Full width for input */
+    }
+
+    .footer-newsletter button {
+        width: 100%; /* Full width for button */
+    }
+
+    .footer-links a {
+        text-align: center; /* Center align links */
     }
 }
 
