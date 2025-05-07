@@ -137,7 +137,7 @@ $(".project-carousel, .testimonial-carousel").owlCarousel({
             contactUs: "Contact Us",
             contactHeading: "If You Have Any Query, Please Contact Us",
             needForm: "Have Any Questions?",
-            formDescription: "We'd love to hear from you! Whether you have questions, feedback, or need assistance with our logistics services, our team is here to help. Feel free to reach out through the form below, and we'll get back to you as soon as possible.",
+            formDescription: "We’d love to hear from you! Whether you have questions, feedback, or need assistance with our logistics services, our team is here to help. Feel free to reach out through the form below, and we’ll get back to you as soon as possible.",
             yourName: "Your Name",
             yourEmail: "Your Email",
             subject: "Subject",
@@ -145,7 +145,8 @@ $(".project-carousel, .testimonial-carousel").owlCarousel({
             leaveMessage: "Leave a message here",
             sendMessage: "Send Message",
             contactDetails: "Contact Details",
-            officeAddress: "40 Meter Street. Star Towers Complex, Block A, Floor 11, Office 1, Erbil, Iraq",
+            officeAddress1: "40 Meter Street. Star Towers Complex, Block A, floor 11, Office 1, Erbil, Iraq",
+            officeAddress2: "State of Gujarat – City of Gandhidham – Sector No. 9 – Rose Arcade – India",    
             callUs: "Call Us",
             phoneNumber: "+964 775 959 1113",
             mailUs: "Mail Us",
@@ -230,7 +231,7 @@ $(".project-carousel, .testimonial-carousel").owlCarousel({
             contactUs: "اتصل بنا",
             contactHeading: "إذا كان لديك أي استفسار، يرجى الاتصال بنا",
             needForm: "هل لديك أي أسئلة؟",
-            formDescription: "نحن في انتظار سماع رأيك! سواء كانت لديك أسئلة، ملاحظات، أو تحتاج الى مساعدة بخصوص خدماتنا اللوجستية، فريقنا هنا لمساعدتك. لا تتررد في التواصل معنا من خلال النموذج أدناه، وسنرد عليك بأقرب وقت ممكن.",
+            formDescription: "نحن في انتظار سماع رأيك! سواء كانت لديك أسئلة، ملاحظات، أو تحتاج إلى مساعدة بخصوص خدماتنا اللوجستية، فريقنا هنا لمساعدتك. لا تتردد في التواصل معنا من خلال النموذج أدناه، وسنرد عليك بأقرب وقت ممكن.",
             yourName: "اسمك",
             yourEmail: "بريدك الإلكتروني",
             subject: "الموضوع",
@@ -238,7 +239,8 @@ $(".project-carousel, .testimonial-carousel").owlCarousel({
             leaveMessage: "اترك رسالة هنا",
             sendMessage: "إرسال الرسالة",
             contactDetails: "تفاصيل الاتصال",
-            officeAddress: "شارع اربعين متري، مجمع ستار تاورز، بلوك A، الطابق 11، مكتب 1، أربيل، العراق",
+            officeAddress1: "شارع اربعين متري، مجمع ستار تاورز، بلوك A، الطابق 11، مكتب 1، أربيل، العراق",
+            officeAddress2: "ولاية غوجارات – مدينة غانديدام – القطاع رقم 9 – روز أركيد – الهند",    
             callUs: "اتصل بنا",
             phoneNumber: "+964 775 959 1113",
             mailUs: "راسلنا",
@@ -356,6 +358,8 @@ $(".project-carousel, .testimonial-carousel").owlCarousel({
         $(".form-floating input#subject").attr("placeholder", translations[lang].subject);
         $(".form-floating textarea#message").attr("placeholder", translations[lang].leaveMessage);
         $(".col-12 button[type='submit']").text(translations[lang].sendMessage);
+        $("#formDescription").text(translations[lang].formDescription);
+
 
         $(".col-lg-6:eq(1) h3").text(translations[lang].contactDetails);
         $(".col-lg-6:eq(1) .d-flex:eq(0) h6").text(translations[lang].ourOffice);
@@ -364,6 +368,9 @@ $(".project-carousel, .testimonial-carousel").owlCarousel({
         $(".col-lg-6:eq(1) .d-flex:eq(1) span").text(translations[lang].phoneNumber);
         $(".col-lg-6:eq(1) .d-flex:eq(2) h6").text(translations[lang].mailUs);
         $(".col-lg-6:eq(1) .d-flex:eq(2) span").text(translations[lang].emailAddress);
+        $("#address1").text(translations[lang].officeAddress1);
+    $("#address2").text(translations[lang].officeAddress2);
+
         
         // Update the direction of text and classes for LTR and RTL
         document.documentElement.setAttribute("lang", lang);
