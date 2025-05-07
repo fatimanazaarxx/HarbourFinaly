@@ -353,33 +353,74 @@
         transform: translateX(-50%);
     }
 }
-
-/* Adjust wave visibility and smoothness for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 767px) and (orientation: portrait) {
     .wave-container {
-        height: 120px; /* Slightly increase height for better visibility */
+        top: 430px; /* Move the wave upwards */
+        height: 160px; /* Maintain proper height */
+    }
+
+    .wave {
+        height: 160px; /* Match the container height */
+        background-size: 50% 100px; /* Adjust background size */
+    }
+}
+@media (width: 768px) and (orientation: portrait) {
+    .wave-container {
+        top: 400px; /* Move the wave upwards */
+        height: 100px; /* Maintain proper height */
+    }
+
+    .wave {
+        height: 160px; /* Match the container height */
+        background-size: 50% 100px; /* Adjust background size */
+    }
+}
+@media (width: 1024px) and (orientation: landscape) {
+    .wave-container {
+        top: 750px; /* Move the wave upwards */
+        height: 100px; /* Maintain proper height */
+    }
+
+    .wave {
+        height: 160px; /* Match the container height */
+        background-size: 50% 100px; /* Adjust background size */
+    }
+}
+@media (width: 1024px) and (orientation: portrait) {
+    .wave-container {
+        top: 750px; /* Move the wave upwards */
+        height: 100px; /* Maintain proper height */
+    }
+
+    .wave {
+        height: 160px; /* Match the container height */
+        background-size: 50% 100px; /* Adjust background size */
+    }
+}
+/* Adjust wave visibility and smoothness for smaller screens */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .wave-container {
+        height: 150px; /* Adjust height for portrait mode */
         bottom: 0;
-        top: 420px;
+    }
+
+    .wave {
+        height: 150px; /* Match the container height */
+        background-size: 50% 150px; /* Adjust background size */
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .wave-container {
+        height: 120px; /* Adjust height for landscape mode */
+        bottom: 0;
     }
 
     .wave {
         height: 120px; /* Match the container height */
         background-size: 50% 120px; /* Adjust background size */
-        animation-duration: 15s; /* Slow down animation for smoother effect */
-    }
-
-    .wave1 {
-        animation-duration: 15s; /* Slow down for smoother animation */
-    }
-
-    .wave2 {
-        animation-duration: 13s;
-    }
-
-    .wave3 {
-        animation-duration: 11s;
     }
 }
+
 /* Ensure the wave sizes and flow look seamless */
 .wave-container .wave {
     animation-timing-function: linear;
