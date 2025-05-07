@@ -84,7 +84,7 @@ $(".project-carousel, .testimonial-carousel").owlCarousel({
             // About section translations
             aboutUs: "About Us",
             aboutHeading: "Trusted Logistics Solutions for a Fast-Paced World",
-            aboutText: "At <b>Harbour Logistics</b>, we deliver efficient, reliable, and seamless shipping solutions. With expertise and a global network, we ensure smooth operations and trusted logistics tailored to your needs. Our vision is to become the leading provider of end-to-end logistics solutions — known for our unwavering commitment to customer satisfaction, operational excellence, and environmental responsibility. We strive to innovate continuously, expand our global reach, and set new standards for reliability, efficiency, and sustainability. Our mission is simple yet powerful: to provide exceptional logistics services that empower businesses to thrive in a global marketplace. We are dedicated to delivering unparalleled service, value, and trust, while fostering a culture rooted in innovation, integrity, and teamwork.",
+            aboutText: "Founded in 2023, Harbor Logistics is a trusted logistics partner headquartered in Erbil, Iraq. We offer a comprehensive range of services including international shipping (sea, land, and air), customs clearance, domestic transportation, and warehousing solutions. <br> With extensive experience and a deep understanding of both local and global markets, we deliver tailored logistics services designed to meet the unique needs of every client. Our reputation is built on quality, reliability, and transparency—making us the preferred choice for companies across diverse industries. <br> Our team consists of highly skilled logistics professionals who go beyond operational execution to provide strategic consultation and innovative solutions that support smarter, more efficient decision-making. At Harbor, we treat every shipment with care and precision—as if it were our own.",
             managedServices: "Managed Services",
             managedServicesText: "End-to-end logistics solutions tailored to optimize your supply chain.",
             dedicatedExperts: "Dedicated Experts",
@@ -177,7 +177,7 @@ $(".project-carousel, .testimonial-carousel").owlCarousel({
             // About section translations
             aboutUs: "من نحن",
             aboutHeading: "حلول لوجستية موثوقة لعالم سريع الخطى",
-            aboutText: "نحن نقدم حلول شحن فعّالة، موثوقة، وسلسة. بفضل خبرتنا وشبكتنا العالمية، نضمن عمليات سلسة ولوجستيات موثوقة مصممة خصيصًا لاحتياجاتك. رؤيتنا هي أن نصبح المزود الرائد لحلول اللوجستيات المتكاملة – معروفين بإلتزامنا الثابت برضا العملاء، التميز التشغيلي، والمسؤولية البيئية. نحن نسعى للابتكار المستمر، وتوسيع نطاقنا العالمي، ووضع معايير جديدة للموثوقية، والكفاءة، والاستدامة. مهمتنا بسيطة ولكن قوية: تقديم خدمات لوجستية استثنائية تمكن الشركات من النجاح في السوق العالمية. نحن ملتزمون بتقديم خدمة لا مثيل لها، وقيمة، وثقة، بينما نعزز ثقافة قائمة على الابتكار، والنزاهة، والعمل الجماعي.",
+            aboutText: "تأسست شركة هاربر للخدمات اللوجستية عام 2023، ويقع مقرها الرئيسي في أربيل - العراق، لتكون شريكًا موثوقًا في عالم النقل والشحن. نقدم مجموعة متكاملة من الخدمات تشمل الشحن الدولي بكافة أنواعه (البحري، البري، والجوي)، والتخليص الجمركي، النقل الداخلي، وحلول التخزين. <br> من خلال خبرتنا الواسعة وفهمنا العميق لاحتياجات السوق المحلي والدولي، نوفّر خدمات مصممة خصيصًا لتلبية متطلبات كل عميل على حدة. لقد بنينا سمعتنا على أساس الجودة، الالتزام، والشفافية، مما جعلنا الخيار الأول للعديد من الشركات في مختلف القطاعات. <br> يضم فريقنا نخبة من الخبراء اللوجستيين الذين لا يقتصر دورهم على تنفيذ العمليات بكفاءة، بل يتجاوز ذلك الى تقديم استشارات مهنية وحلول مبتكرة تساعد عملاءنا في اتخاذ قرارات استراتيجية مدروسة.",
             managedServices: "خدمات مُدارة",
             managedServicesText: "حلول لوجستية شاملة مصممة لتحسين سلسلة التوريد الخاصة بك.",
             dedicatedExperts: "خبراء متخصصون",
@@ -327,21 +327,21 @@ $(".project-carousel, .testimonial-carousel").owlCarousel({
         $(".btn-view-all").text(translations[lang].viewAll);
 
         // Update Footer section translations
-$(".footer .footer-office h4").text(translations[lang].ourOffice);
-$(".footer .footer-office p:nth-child(2)").html(`<i class="fa fa-map-marker-alt me-3"></i>${translations[lang].location}`);
-$(".footer .footer-office p:nth-child(3)").html(`<i class="fa fa-phone-alt me-3"></i>${translations[lang].phone}`);
-$(".footer .footer-office p:nth-child(4)").html(`<i class="fa fa-envelope me-3"></i>${translations[lang].email}`);
+        $(".footer .footer-office h4").text(translations[lang].ourOffice);
+        $(".footer .footer-office p:nth-child(2)").html(`<i class="fa fa-map-marker-alt me-3"></i>${translations[lang].location}`);
+        $(".footer .footer-office p:nth-child(3)").html(`<i class="fa fa-phone-alt me-3"></i>${translations[lang].phone}`);
+        $(".footer .footer-office p:nth-child(4)").html(`<i class="fa fa-envelope me-3"></i>${translations[lang].email}`);
 
-// Update Quick Links section
-$(".footer .footer-links h4").text(translations[lang].quickLinks);
-$(".footer .footer-links a:nth-child(1)").text(translations[lang].aboutUsLink);
-$(".footer .footer-links a:nth-child(2)").text(translations[lang].contactUsLink);
-$(".footer .footer-links a:nth-child(3)").text(translations[lang].ourServicesLink);
+        // Update Quick Links section
+        $(".footer .footer-links a:nth-of-type(1)").text(translations[lang].aboutUsLink);
+        $(".footer .footer-links a:nth-of-type(2)").text(translations[lang].contactUsLink);
+        $(".footer .footer-links a:nth-of-type(3)").text(translations[lang].ourServicesLink);
 
-// Update Newsletter section
-$(".footer .footer-newsletter h4").text(translations[lang].newsletterHeading);
-$(".footer .footer-newsletter p").text(translations[lang].newsletterText);
-$(".footer .footer-newsletter button").text(translations[lang].subscribeBtn);
+        // Update Newsletter section
+        $(".footer .footer-newsletter h4").text(translations[lang].newsletterHeading);
+        $(".footer .footer-newsletter p").text(translations[lang].newsletterText);
+        $(".footer .footer-newsletter button").text(translations[lang].subscribeBtn);
+
         // Update Contact section
         $(".container-xxl .text-center text-primary").text(translations[lang].contactUs);
         $(".container-xxl .text-center h1.display-5").text(translations[lang].contactHeading);
