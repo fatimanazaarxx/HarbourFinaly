@@ -25,29 +25,17 @@ $(window).scroll(function () {
 
 // Back to top button
 $(window).scroll(function () {
-    if ($(this).scrollTop() > 300) {
+    if ($(this).scrollTop() > 20) {
         $('.back-to-top').fadeIn('slow');
     } else {
         $('.back-to-top').fadeOut('slow');
     }
 });
 $('.back-to-top').click(function () {
-    $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+    $('html, body').animate({scrollTop: 0}, 100, 'easeInOutExpo');
     return false;
 });
 
-// Modal Video
-var $videoSrc;
-$('.btn-play').click(function () {
-    $videoSrc = $(this).data("src");
-});
-console.log($videoSrc);
-$('#videoModal').on('shown.bs.modal', function (e) {
-    $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
-});
-$('#videoModal').on('hide.bs.modal', function (e) {
-    $("#video").attr('src', $videoSrc);
-});
 
 // Project and Testimonial carousel
 $(".project-carousel, .testimonial-carousel").owlCarousel({
@@ -82,6 +70,7 @@ $(".project-carousel, .testimonial-carousel").owlCarousel({
             langSwitch: "🇸🇦 Arabic",
             carousel2Heading: "Seamless Logistics, Limitless Possibilities",
             carousel2Btn: "Learn More",
+
             // Feature section translations
             reliability: "Reliability",
             reliabilityText: "We prioritize reliability in logistics, ensuring your peace of mind.",
@@ -91,6 +80,7 @@ $(".project-carousel, .testimonial-carousel").owlCarousel({
             innovationText: "We leverage innovation and cutting-edge tech for continuous improvement and superior results.",
             globalReach: "Global Reach",
             globalReachText: "With a vast global network, we provide seamless cross-border logistics.",
+            
             // About section translations
             aboutUs: "About Us",
             aboutHeading: "Trusted Logistics Solutions for a Fast-Paced World",
@@ -100,28 +90,36 @@ $(".project-carousel, .testimonial-carousel").owlCarousel({
             dedicatedExperts: "Dedicated Experts",
             dedicatedExpertsText: "A skilled team ensuring efficiency, reliability, and seamless operations.",
             exploreMore: "Explore More",
+
             // Services section translations
             ourServices: "Our Services",
             servicesHeading: "Logistic Services that We Offer",
-            freightForwarding: "Freight Forwarding",
+            freightForwarding: "International Freight Forwarding",
             freightForwardingText: "Efficient shipment management, ensuring smooth and timely deliveries worldwide.",
             customsClearance: "Customs Clearance Services",
             customsClearanceText: "Expert handling of customs procedures to ensure smooth, hassle-free imports and exports.",
-            seaTransportation: "Sea Transportation",
-            seaTransportationText: "Reliable and efficient ocean freight solutions for large-scale global shipping.",
-            roadTransportation: "Road Transportation",
-            roadTransportationText: "Flexible and secure inland transport connecting key locations with efficiency.",
-            insurance: "Insurance",
-            insuranceText: "Comprehensive cargo protection to safeguard your shipments against risks.",
-            warehousing: "Warehousing & Storage",
-            warehousingText: "Secure, scalable storage solutions to keep your goods safe and accessible.",
-            doorToDoor: "Door To Door Delivery",
+            doorToDoor: "Door To Door Services",
             doorToDoorText: "Seamless door-to-door delivery tailored for ultimate convenience and peace of mind.",
-            airShipping: "Air Shipping",
-            airShippingText: "Swift air shipping services designed to meet tight deadlines and deliver excellence at every altitude.",
-            heavyCargo: "Heavy Cargo Logistics",
-            heavyCargoText: "Heavy-duty logistics for your large-scale shipments — reliable, efficient, and ready to move the world.",
+            seaFreight: "Sea Freight Services",
+            seaFreightText: "Reliable and cost-effective sea freight solutions for your shipping needs.",
+            LandFreight: "Land Freight Services",
+            LandFreightText: "Fast and secure land freight solutions across borders, with reliable delivery every time",
+            AirFreight: "Air Freight Services",
+            AirFreightText: "reliable air freight solutions for timely global deliveries, ensuring goods reach their destination.",
+            cargo: "Cargo Insurance",
+            cargoText: "Protect your shipments with our reliable cargo insurance — peace of mind for every journey.",
+            oil: "⁠Oil & Gas Logistics",
+            oilText: "Reliable, efficient transport solutions tailored for the energy sector.",
+            storage: "Warehousing & Storage",
+            storageText: "Secure, scalable storage solutions to keep your goods safe and accessible.",
+            HeavyLift: "Out of Gauge & Heavy Lift Cargo",
+            HeavyLiftText: "Expert handling of oversized and heavy shipments with precision and care.",
+            road: "Domestic Road Transportation",
+            roadText: "Fast and reliable nationwide delivery with a dedicated fleet, ensuring delivery on time.",
+            project: "Project Cargo Transportation",
+            projectText: "Specialized logistics solutions for complex, high-value, and oversized project shipments.",
             viewAll: "View All",
+
             // Footer section translations
             ourOffice: "Our Office",
             location: "Erbil, Iraq",
@@ -165,6 +163,7 @@ $(".project-carousel, .testimonial-carousel").owlCarousel({
             langSwitch: "🇬🇧 English",
             carousel2Heading: "لوجستيات سلسة، إمكانيات غير محدودة",
             carousel2Btn: "تعرف أكثر",
+
             // Feature section translations
             reliability: "موثوقية",
             reliabilityText: "نحن نعطي الأولوية للموثوقية في الخدمات اللوجستية، مما يضمن راحة بالك.",
@@ -174,6 +173,7 @@ $(".project-carousel, .testimonial-carousel").owlCarousel({
             innovationText: "نحن نستفيد من الابتكار والتكنولوجيا المتطورة للتحسين المستمر وتحقيق نتائج متميزة.",
             globalReach: "انتشار عالمي",
             globalReachText: "مع شبكة عالمية واسعة، نقدم خدمات لوجستية سلسة عبر الحدود.",
+
             // About section translations
             aboutUs: "من نحن",
             aboutHeading: "حلول لوجستية موثوقة لعالم سريع الخطى",
@@ -183,27 +183,35 @@ $(".project-carousel, .testimonial-carousel").owlCarousel({
             dedicatedExperts: "خبراء متخصصون",
             dedicatedExpertsText: "فريق ماهر يضمن الكفاءة والموثوقية وسلاسة العمليات.",
             exploreMore: "اكتشف المزيد",
+
             // Services section translations
             ourServices: "خدماتنا",
             servicesHeading: "الخدمات اللوجستية التي نقدمها",
-            freightForwarding: "خدمات الشحن",
+            freightForwarding: "خدمات الشحن الدولي",
             freightForwardingText: "إدارة فعالة للشحنات، تضمن تسليم سلس وفي الوقت المناسب لكل مكان.",
             customsClearance: "خدمات التخليص الجمركي",
             customsClearanceText: "معالجة خبيرة للإجراءات الجمركية لضمان الاستيراد والتصدير بسلاسة ودون عناء.",
-            seaTransportation: "النقل البحري",
-            seaTransportationText: "حلول شحن بحري موثوقة وفعالة للشحن العالمي واسع النطاق.",
-            roadTransportation: "النقل البري",
-            roadTransportationText: "نقل بري مرن وآمن يربط المواقع الرئيسية بكفاءة.",
-            insurance: "التأمين",
-            insuranceText: "حماية شاملة للبضائع لتأمين شحناتك ضد المخاطر.",
-            warehousing: "التخزين والمستودعات",
-            warehousingText: "حلول تخزين آمنة للحفاظ على سلامة بضائعك وسهولة الوصول إليها.",
-            doorToDoor: "توصيل من الباب إلى الباب",
-            doorToDoorText: "توصيل سلس من الباب إلى الباب مصمم لتحقيق الراحة القصوى وراحة البال.",
-            airShipping: "الشحن الجوي",
-            airShippingText: "سريعة مصممة لتلبية المواعيد النهائية الضيقة وتقديم التميز على كل ارتفاع.",
-            heavyCargo: "لوجستيات الشحن الثقيل",
-            heavyCargoText: "خدمات لوجستية للشحنات الكبيرة — موثوقة وفعالة وجاهزة لتحريك العالم.",
+            doorToDoor: "التوصيل لباب المنزل ",
+            doorToDoorText: "توصيل سلس لباب المنزل مصمم لراحة البال",
+            seaFreight: "خدمات الشحن البحري",
+            seaFreightText: "حلول شحن بحرية موثوقة وفعالة من حيث التكلفة لتلبية احتياجاتك.",
+            LandFreight: "خدمات الشحن البري",
+            LandFreightText: "حلول شحن بري سريعة وآمنة لبضاعتك عبر الحدود.",
+            AirFreight: "خدمات الشحن الجوي",
+            AirFreightText: "شحن جوي سريع وموثوق للتوصيل حول العالم.",
+            cargo: "تامين الحمولة",
+            cargoText: " أمّن شحناتك مع خدمة التأمين على البضائع الموثوقة",
+            oil: "الخدمات اللوجستية للنفط والغاز",
+            oilText: "حلول نقل موثوقة وفعّالة مصممة خصيصًا لقطاع الطاقة.",
+            storage: "التخزين والمستودعات",
+            storageText: "حلول تخزين آمنة وقابلة للتوسّع لحماية بضائعك وضمان سهولة الوصول إليها.",
+            HeavyLift: "الشحنات الثقيلة وغير القياسية",
+            HeavyLiftText: "التعامل الاحترافي مع الشحنات الضخمة والثقيلة، مع ضمان الدقة والعناية في كل خطوة من عملية النقل.",
+            road: "النقل البري المحلي",
+            roadText: "توصيل سريع وموثوق في جميع أنحاء البلاد مع أسطول مخصص لضمان التسليم في الوقت المحدد.",
+            project: "نقل الشحنات الخاصة بالمشاريع",
+            projectText: "حلول لوجستية متخصصة للشحنات المعقدة، ذات القيمة العالية، والأحجام الكبيرة.",
+           
             viewAll: "عرض جميع الخدمات",
             // Footer section translations
             ourOffice: "مكتبنا",
@@ -284,26 +292,38 @@ $(".project-carousel, .testimonial-carousel").owlCarousel({
         $(".row.g-4 .col-lg-4:nth-child(2) .service-item h5").text(translations[lang].customsClearance);
         $(".row.g-4 .col-lg-4:nth-child(2) .service-item p").text(translations[lang].customsClearanceText);
         
-        $(".row.g-4 .col-lg-4:nth-child(3) .service-item h5").text(translations[lang].seaTransportation);
-        $(".row.g-4 .col-lg-4:nth-child(3) .service-item p").text(translations[lang].seaTransportationText);
+        $(".row.g-4 .col-lg-4:nth-child(3) .service-item h5").text(translations[lang].doorToDoor);
+        $(".row.g-4 .col-lg-4:nth-child(3) .service-item p").text(translations[lang].doorToDoorText);
         
-        $(".row.g-4 .col-lg-4:nth-child(4) .service-item h5").text(translations[lang].roadTransportation);
-        $(".row.g-4 .col-lg-4:nth-child(4) .service-item p").text(translations[lang].roadTransportationText);
-        
-        $(".row.g-4 .col-lg-4:nth-child(5) .service-item h5").text(translations[lang].insurance);
-        $(".row.g-4 .col-lg-4:nth-child(5) .service-item p").text(translations[lang].insuranceText);
-        
-        $(".row.g-4 .col-lg-4:nth-child(6) .service-item h5").text(translations[lang].warehousing);
-        $(".row.g-4 .col-lg-4:nth-child(6) .service-item p").text(translations[lang].warehousingText);
-        
-        $(".row.g-4 .col-lg-4:nth-child(7) .service-item h5").text(translations[lang].doorToDoor);
-        $(".row.g-4 .col-lg-4:nth-child(7) .service-item p").text(translations[lang].doorToDoorText);
+        $(".row.g-4 .col-lg-4:nth-child(4) .service-item h5").text(translations[lang].seaFreight);
+        $(".row.g-4 .col-lg-4:nth-child(4) .service-item p").text(translations[lang].seaFreightText);
 
-        $(".row.g-4 .col-lg-4:nth-child(8) .service-item h5").text(translations[lang].airShipping);
-        $(".row.g-4 .col-lg-4:nth-child(8) .service-item p").text(translations[lang].airShippingText);
+        $(".row.g-4 .col-lg-4:nth-child(5) .service-item h5").text(translations[lang].LandFreight);
+        $(".row.g-4 .col-lg-4:nth-child(5) .service-item p").text(translations[lang].LandFreightText);
 
-        $(".row.g-4 .col-lg-4:nth-child(9) .service-item h5").text(translations[lang].heavyCargo);
-        $(".row.g-4 .col-lg-4:nth-child(9) .service-item p").text(translations[lang].heavyCargoText);
+        $(".row.g-4 .col-lg-4:nth-child(6) .service-item h5").text(translations[lang].AirFreight);
+        $(".row.g-4 .col-lg-4:nth-child(6) .service-item p").text(translations[lang].AirFreightText);
+
+        $(".row.g-4 .col-lg-4:nth-child(7) .service-item h5").text(translations[lang].cargo);
+        $(".row.g-4 .col-lg-4:nth-child(7) .service-item p").text(translations[lang].cargoText);
+
+        $(".row.g-4 .col-lg-4:nth-child(8) .service-item h5").text(translations[lang].oil);
+        $(".row.g-4 .col-lg-4:nth-child(8) .service-item p").text(translations[lang].oilText);
+
+        $(".row.g-4 .col-lg-4:nth-child(9) .service-item h5").text(translations[lang].storage);
+        $(".row.g-4 .col-lg-4:nth-child(9) .service-item p").text(translations[lang].storageText);
+
+        $(".row.g-4 .col-lg-4:nth-child(10) .service-item h5").text(translations[lang].HeavyLift);
+        $(".row.g-4 .col-lg-4:nth-child(10) .service-item p").text(translations[lang].HeavyLiftText);
+
+        $(".row.g-4 .col-lg-4:nth-child(11) .service-item h5").text(translations[lang].road);
+        $(".row.g-4 .col-lg-4:nth-child(11) .service-item p").text(translations[lang].roadText);
+
+        $(".row.g-4 .col-lg-4:nth-child(12) .service-item h5").text(translations[lang].project);
+        $(".row.g-4 .col-lg-4:nth-child(12) .service-item p").text(translations[lang].projectText);
+
+        
+
         $(".btn-view-all").text(translations[lang].viewAll);
 
         // Update Footer section translations
